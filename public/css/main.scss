@@ -1,0 +1,13 @@
+@import "h5bp";
+
+object.logo {
+	margin: -25% 0 0;
+	width:150px;
+	height:100px;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 1000;
+	}
+}
