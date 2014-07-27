@@ -1,13 +1,54 @@
 @import "h5bp";
 
-object.logo {
-	margin: -25% 0 0;
-	width:150px;
-	height:100px;
-}
-
-@keyframes dash {
-	to {
-		stroke-dashoffset: 1000;
+nav.navbar.navbar-default {
+	background: none;
+	background-color: none;
+	box-shadow: none;
+	border:none;
+	.collapse.in,
+	.collapsing {
+		border:none;
 	}
 }
+
+a.navbar-brand {
+
+	object.logo {
+		position: relative;
+		margin: -25% 0 0;
+		height:100px;
+	}
+}
+
+a.front-brand {
+	display: none;
+	margin: 0 0 -70px;
+	object.logo {
+		position: relative;
+		width:300px;
+	}
+}
+
+
+@media (max-width:750px) {
+	a.navbar-brand object.logo {
+		display: none;
+	}
+
+	a.front-brand {
+		display: block;
+	}
+
+}
+
+// Sections
+
+section.front {
+
+	.jumbotron {
+		background-color: #fff;
+		text-align: center;
+
+	}
+}
+	
