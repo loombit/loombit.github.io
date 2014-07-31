@@ -1,13 +1,33 @@
-@import "h5bp";
+// 
+
+$themecolor: #4827e6;
+
+
 
 nav.navbar.navbar-default {
+	position: absolute;
+	z-index:10;
+	margin: 0;
+
 	background: none;
 	background-color: none;
 	box-shadow: none;
 	border:none;
 	.collapse.in,
+	.collapse,
 	.collapsing {
 		border:none;
+	}
+}
+button.navbar-toggle {
+	width:57px;
+	height:57px;
+	border: 1px solid #444;
+	border-radius: 50%;
+	font-size:1.2em;
+	&:hover {
+		background-color: #999;
+		cursor: pointer;
 	}
 }
 
@@ -22,15 +42,15 @@ a.navbar-brand {
 
 a.front-brand {
 	display: none;
-	margin: 0 0 -70px;
+	margin: 10% 0 -100px;
 	object.logo {
 		position: relative;
-		width:300px;
+		width:100%;
 	}
 }
 
 
-@media (max-width:750px) {
+@media (max-width:451px) {
 	a.navbar-brand object.logo {
 		display: none;
 	}
@@ -41,14 +61,56 @@ a.front-brand {
 
 }
 
+
 // Sections
-
-section.front {
-
+section{
+	width:100%;
+	margin: 0;
+	padding: 40px;
+	margin-bottom: 175px;
+}
+.front {
+	position: relative;
+	z-index: 9;
+	top:0;
+	padding:0;
+	background-color: #fff;
 	.jumbotron {
-		background-color: #fff;
+		height:100%;
+		margin:0;
+		background: none;
 		text-align: center;
-
 	}
 }
+.about {
+	height:100%;
+	position: absolute;
+	z-index:9;
+	top:0;
+	display:none;
+	color:#eee;
+	background-color: $themecolor;
+}
 	
+// Footer
+footer {
+	position: fixed;
+	z-index:2;
+	bottom: 0;
+
+	background-color: #333;
+	color:#fff;
+	padding:20px 40px;
+	ul {
+		padding:0;
+		list-style: none;
+		a:hover {cursor: pointer;}
+	}
+	.copyright {
+		position: relative;
+		top:10px;
+		font-size: 0.9em;
+
+		opacity: 0.7;
+	}
+}

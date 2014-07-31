@@ -27,40 +27,33 @@
         <nav class="navbar navbar-default" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">
                     <object data="logo.svg" type="image/svg+xml" class="logo"></object>
                 </a>
+                <button type="button" class="navbar-toggle" id="toggleAbout">
+                    <span class="info-icon">i</span>
+                </button>
             </div>
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
         </nav>
         <%- yield %>
-
         <footer>
             <div class="container">
                 <div class="row">
+                    <div class="col-xs-6">
+                        <h4>Come Visit</h4>
+                        <p>
+                            Vancouver, BC, Canada
+                        </p>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>+1.605.518.5301</li>
+                            <li><a href="mailto:hello@loombit.com">hello@loombit.com</a></li>
+                        </ul>
+                    </div>
                     <div class="col-md-12">
-                    <p>Loombit 2014 All Rights Reserved</p>
+                        <p class="copyright">Loombit 2014 All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -69,6 +62,7 @@
         <!-- Vendor JS -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
 
         <!-- Custom JS -->
         <script src="js/main.js"></script>
