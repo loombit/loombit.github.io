@@ -10,6 +10,7 @@ $(window).resize(function() {
 
 // Front Page Animations
 
+// SVG Animation (D3.js)
 var
 	frontcanvas = d3.select('.front'),
 	frontsvg = frontcanvas.append('svg')
@@ -42,12 +43,31 @@ var
 		.transition()
 		.delay(4500)
 		.style('bottom', '0px')
-		.style('opacity', 1);
+		.style('opacity', 1),
+
+	buttonlinks = frontcanvas.select('ul').selectAll('li')
+		.each(function(d,i) {
+			d3.select(this)
+				.style('bottom', '20px')
+				.style('opacity',0)
+				.transition()
+				.delay(function() {return 4500 + 400*i;})
+				.duration(800)
+				.style('bottom', '0px')
+				.style('opacity', 1);
+		});
+
+// HTML Animation
+
+		
 
 $('#toggleAbout').on('click', function(event) {
 	$('.about').fadeToggle(300);
 });
 
+$('#toggle').on('click', function () {
+	$(this).parents('section').fadeToggle('300');
+});
 
 $(window).on('mousemove', function(event) {
 
