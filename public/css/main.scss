@@ -25,8 +25,7 @@ a.brand {
 		width:100%;
 	}
 	@media (min-width: $smallbreakpoint) {
-		text-align: left;
-		margin: 0 0 0 0;
+		margin:7% 0 -70px;
 		object.logo {
 			width:250px;
 		}
@@ -45,6 +44,7 @@ button.toggle {
 	border: 1px solid #444;
 	border-radius: 50%;
 	font-size:1.2em;
+	background: none;
 	background-color:transparent;
 	&:hover {
 		background-color: #999;
@@ -55,6 +55,7 @@ button.toggle {
 	}
 }
 button.toggle.exit {
+	margin:20px 0 -30px;
 	background-color: transparent;
 	border-color: #fff;
 	left:90%;
@@ -118,9 +119,7 @@ section{
 	}
 
 	@media (min-width: $smallbreakpoint) {
-		text-align: right;
 		h2 {
-			text-align: right;
 			font-size: 3em;
 			margin-bottom:30px;
 		}
@@ -144,13 +143,22 @@ section{
 	display:none;
 	color:#eee;
 	background-color: $themecolor;
+
+	@media (min-width: $smallbreakpoint) {
+		padding:20px;
+		p {
+			width:400px;
+		}
+	}
 }
+
 	
 // Footer
 footer {
 	position: relative;
 	z-index:$Zfooter;
 	height:175px;
+	text-align: center;
 
 	background-color: $footerbackcolor;
 	color:#333;

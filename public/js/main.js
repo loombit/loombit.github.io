@@ -52,7 +52,13 @@ var
 		
 
 $('#toggleAbout').on('click', function(event) {
-	$('.about').fadeToggle(300);
+	d3.select('.about')
+		.style('right','100%')
+		.style('display','block')
+		.transition()
+		.duration(1000)
+		.style('right','0%');
+
 });
 
 $('#toggle').on('click', function () {
