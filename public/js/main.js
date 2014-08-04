@@ -1,5 +1,7 @@
-// Resize Section Height to Window
+// No fancy stuff here...
+// Loombit 2014
 
+// Resize Section Height to Window
 $(window).resize(function() {
 
 	var height = $(window).height();
@@ -8,8 +10,6 @@ $(window).resize(function() {
 }).resize();
 
 // Front Page Animations
-
-// SVG Animation (D3.js)
 var
 	frontpage = $('.front'),
 	aboutpage = $('.about'),
@@ -39,10 +39,7 @@ var
 		});
 		
 
-// HTML Animation
-
-		
-
+// Page Sliding Animations
 $('#toggleAbout').on('click', function(event) {
 	$('section')
 		.velocity({
