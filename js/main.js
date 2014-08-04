@@ -10,45 +10,43 @@ $(window).resize(function() {
 }).resize();
 
 // Front Page Animations
-// var
-// 	frontpage = $('.front'),
-// 	aboutpage = $('.about'),
+var
+	headline = $('.front h2')
+		.css('opacity', 0)
+		.velocity({
+			'opacity':[1,0],
+			translateY: '10px'
+		},
+		{
+			delay: 4500
+		}),
 
-// 	headline = $('.front h2')
-// 		.css('opacity', 0)
-// 		.velocity({
-// 			'opacity':[1,0],
-// 			translateY: '10px'
-// 		},
-// 		{
-// 			delay: 4500
-// 		}),
-
-// 	buttonlinks = $('.front li')
-// 		.css('opacity', 0)
-// 		.each(function(i) {
-// 			$(this).velocity({
-// 				translateY: [0,20],
-// 				'opacity' : [1,0]
-// 			},
-// 			{
-// 				delay: (function() {
-// 					return 5000 + 400*i;
-// 				})()
-// 			});
-// 		});
+	buttonlinks = $('.front li')
+		.css('opacity', 0)
+		.each(function(i) {
+			$(this).velocity({
+				translateY: [0,20],
+				'opacity' : [1,0]
+			},
+			{
+				delay: (function() {
+					return 5000 + 400*i;
+				})()
+			});
+		});
 		
 
 // Page Sliding Animations
 $('#toggleAbout').on('click', function(event) {
-	$('section')
+
+	$('.front')
 		.velocity({
 			translateX: '100%'
-		},{});
+		},300);
 });
 
 $('#toggle').on('click', function () {
-	$('section').velocity('reverse');
+	$('.front').velocity('reverse');
 });
 
 
