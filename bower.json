@@ -1,0 +1,35 @@
+{
+  "name": "Loombit",
+  "version": "0.0.0",
+  "homepage": "http://loombit.com",
+  "authors": [
+    "info@loombit.com"
+  ],
+  "description": "Web Design & Development",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "Loombit",
+    "Web",
+    "Design"
+  ],
+  "license": "None",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests",
+    "_harp/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap":"*",
+    "velocity": "~0.10.0",
+    "fontawesome": "*",
+    "jquery": "*"
+  }
+}
