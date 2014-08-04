@@ -9,9 +9,9 @@ $smallbreakpoint:	480px;
 // Stacking Order
 
 $Znavbar: 			10;
-$Zfront:			7;
+$Zfront:			11;
 $Zfrontcontent:		8;
-$Zabout:			11;
+$Zabout:			7;
 $Zfooter:			5;
 $Zfootercontent:	6;
 
@@ -24,16 +24,14 @@ a.brand {
 	position: relative;
 	z-index: 7;
 	display: block;
-	margin: 10% 0 -100px;
+	margin: 10% auto -100px;
 	object.logo {
 		position: relative;
 		width:100%;
 	}
 	@media (min-width: $smallbreakpoint) {
-		margin:7% 0 -70px;
-		object.logo {
-			width:250px;
-		}
+		margin-bottom: -70px;
+		width:250px;
 	}
 
 }
@@ -60,13 +58,21 @@ button.toggle {
 	}
 }
 button.toggle.exit {
-	margin:20px 0 -30px;
+	position: absolute;
+	right:0;
+	top:0;
 	background-color: transparent;
-	border-color: #fff;
-	left:90%;
+
+	border-radius: 0;
+	border: none;
+	height:100%;
+	width:14%;
+
 	&:hover {
-		background-color:#fff;
-		i {color:$themecolor;}
+		background: linear-gradient(to right,rgba(0,0,0,0), rgba(0,0,0,0.3));
+	}
+	&:active {
+		background: linear-gradient(to right,rgba(0,0,0,0), rgba(0,0,0,0.4));
 	}
 }
 
@@ -141,18 +147,39 @@ section{
 }
 .about {
 	position: absolute;
+	top:0;
+	right:0;
 	height:100%;
 	padding-bottom: 0;
-	
+
 	z-index: $Zabout;
-	top:0;
-	right:100%;
-	display:block;
+
 	color:#eee;
 	background-color: $themecolor;
 
+	.media {
+		
+		img {
+			border-radius: 50%;
+			width:100px;}
+
+		.media-body {
+			position: relative;
+			top:20px;
+			left:20px;
+			h4 {font-size: 1.3em;}
+			p {
+				margin-top: 1ex;
+				font-style: italic;
+				opacity:0.7;
+
+			}
+		}
+	}
+
 	@media (min-width: $smallbreakpoint) {
-		padding:20px;
+		padding:40px;
+		padding-top:60px;
 		p {
 			width:400px;
 		}

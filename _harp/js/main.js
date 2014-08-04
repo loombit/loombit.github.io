@@ -11,9 +11,6 @@ $(window).resize(function() {
 
 // Front Page Animations
 var
-	frontpage = $('.front'),
-	aboutpage = $('.about'),
-
 	headline = $('.front h2')
 		.css('opacity', 0)
 		.velocity({
@@ -22,7 +19,7 @@ var
 		},
 		{
 			delay: 4500
-		});
+		}),
 
 	buttonlinks = $('.front li')
 		.css('opacity', 0)
@@ -41,14 +38,15 @@ var
 
 // Page Sliding Animations
 $('#toggleAbout').on('click', function(event) {
-	$('section')
+
+	$('.front')
 		.velocity({
 			translateX: '100%'
-		},{});
+		},300);
 });
 
 $('#toggle').on('click', function () {
-	$('section').velocity('reverse');
+	$('.front').velocity('reverse');
 });
 
 
