@@ -15,6 +15,11 @@ $Zabout:			11;
 $Zfooter:			5;
 $Zfootercontent:	6;
 
+main {
+	background-color: blue;
+	overflow:hidden;
+}
+
 a.brand {
 	position: relative;
 	z-index: 7;
@@ -77,6 +82,7 @@ section{
 	width:100%;
 	top:0;
 	padding:0;
+	background: white;
 	background-color: #fff;
 	text-align: center;
 
@@ -140,7 +146,8 @@ section{
 	
 	z-index: $Zabout;
 	top:0;
-	display:none;
+	right:100%;
+	display:block;
 	color:#eee;
 	background-color: $themecolor;
 
@@ -162,12 +169,12 @@ footer {
 
 	background-color: $footerbackcolor;
 	color:#333;
-	padding:20px 40px;
 
 	.wrapper {
 		height:auto;
 		position: fixed;
 		bottom: 0;
+		width:100%;
 		z-index: $Zfootercontent;
 	}
 	p {

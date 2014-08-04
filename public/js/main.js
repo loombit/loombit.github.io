@@ -3,7 +3,6 @@
 $(window).resize(function() {
 
 	var height = $(window).height();
-	height = height + -$('navbar.navbar-default').height();
 	$('#wheight').height(height);
 
 }).resize();
@@ -12,57 +11,47 @@ $(window).resize(function() {
 
 // SVG Animation (D3.js)
 var
-	frontcanvas = d3.select('.front'),
-	frontsvg = frontcanvas.append('svg')
-		.attr('height', '100%')
-		.attr('width', '100%')
-		.style('position', 'absolute')
-		.style('top', '0')
-		.style('left','0'),
+	frontpage = $('.front'),
+	aboutpage = $('.about'),
 
-	logoMobile = frontcanvas.select('object.logo'),
-
-	infotext = frontsvg.append('text')
-		.attr('x', '10%')
-		.attr('y', '10%'),
-
-	headline = frontcanvas.select('h2')
-		.style('bottom', '10px')
-		.style('position', 'relative')
-		.style('opacity', 0)
-		.transition()
-		.delay(4500)
-		.style('bottom', '0px')
-		.style('opacity', 1),
-
-	buttonlinks = frontcanvas.select('ul').selectAll('li')
-		.each(function(d,i) {
-			d3.select(this)
-				.style('bottom', '20px')
-				.style('opacity',0)
-				.transition()
-				.delay(function() {return 4500 + 400*i;})
-				.duration(800)
-				.style('bottom', '0px')
-				.style('opacity', 1);
+	headline = $('.front h2')
+		.css('opacity', 0)
+		.velocity({
+			'opacity':[1,0],
+			translateY: '10px'
+		},
+		{
+			delay: 4500
 		});
+
+	buttonlinks = $('.front li')
+		.css('opacity', 0)
+		.each(function(i) {
+			$(this).velocity({
+				translateY: [0,20],
+				'opacity' : [1,0]
+			},
+			{
+				delay: (function() {
+					return 5000 + 400*i;
+				})()
+			});
+		});
+		
 
 // HTML Animation
 
 		
 
 $('#toggleAbout').on('click', function(event) {
-	d3.select('.about')
-		.style('right','100%')
-		.style('display','block')
-		.transition()
-		.duration(1000)
-		.style('right','0%');
-
+	$('section')
+		.velocity({
+			translateX: '100%'
+		},{});
 });
 
 $('#toggle').on('click', function () {
-	$(this).parents('section').fadeToggle('300');
+	$('section').velocity('reverse');
 });
 
 
