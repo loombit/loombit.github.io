@@ -18,7 +18,7 @@ var
 			translateY: '10px'
 		},
 		{
-			delay: 4500
+			delay: 2000
 		}),
 
 	buttonlinks = $('.front li')
@@ -30,7 +30,7 @@ var
 			},
 			{
 				delay: (function() {
-					return 5000 + 400*i;
+					return 2200 + 400*i;
 				})()
 			});
 		});
